@@ -31,7 +31,6 @@ $(document).ready(function() {
         $(self).addClass('faded');
       }, 600+i*400);
     });
-
 });
 
 // Page Intro Animations

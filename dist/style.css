@@ -130,7 +130,7 @@ hr {
 
 .slide-in {
   opacity: 0;
-  transform: translateY(90px);
+  transform: translateY(40px);
   transition: 1.6s ease opacity, 2s cubic-bezier(0.19, 1, 0.22, 1) transform; }
 
 .fade-in {
@@ -225,7 +225,7 @@ hr {
   background-color: transparent;
   height: 45px;
   padding-top: 13px;
-  transition: all 0.2s ease;
+  transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   background-color: transparent; }
   .header--fixed.dark-header {
@@ -333,7 +333,28 @@ hr {
         color: white;
         display: inline-block; }
       .post__thumb__overlay__content h3 {
-        margin-bottom: -1px; }
+        margin-bottom: -1px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        display: inline-block; }
+        .post__thumb__overlay__content h3:before {
+          content: '';
+          background-color: #00A0F3;
+          position: absolute;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+          transform: translateX(-100%);
+          transition: transform cubic-bezier(0.19, 1, 0.22, 1) 0.6s; }
+        .post__thumb__overlay__content h3.yellow:before {
+          background-color: #FEDB5A; }
+        .post__thumb__overlay__content h3.red:before {
+          background-color: red; }
+        .post__thumb__overlay__content h3.greenbg:before {
+          background-color: #12D475; }
+        .post__thumb__overlay__content h3.cyan:before {
+          background-color: #00CCCD; }
   .post__thumb {
     background-color: #eee;
     width: 100%;
@@ -359,6 +380,8 @@ hr {
     transform: scale3d(1, 1, 1); }
   .post:hover .post__thumb__overlay__content p:before {
     transform: translate3d(100%, 0, 0); }
+  .post:hover .post__thumb__overlay__content h3:before {
+    transform: translateX(0%); }
 
 .about-me {
   margin-top: 20%;
@@ -415,7 +438,7 @@ hr {
   position: fixed;
   opacity: 0;
   top: 0;
-  transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.5s ease;
+  transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.5s ease;
   z-index: -1;
   transform: translateX(100%); }
   .page--active {

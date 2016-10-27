@@ -147,7 +147,7 @@ hr {
 // ANIMATION
 .slide-in {
   opacity: 0;
-  transform: translateY(90px);
+  transform: translateY(40px);
   transition: 1.6s ease opacity, 2s $cubic transform;
 }
 .fade-in {
@@ -250,7 +250,7 @@ hr {
   background-color: transparent;
   height: 45px;
   padding-top: 13px;
-  transition: all 0.2s ease;
+  transition: all 0.8s $cubic;
   border-bottom: 1px solid transparentize(#fff, 0.9);
   background-color: transparent;
   &.dark-header {
@@ -383,6 +383,32 @@ hr {
       }
       & h3 {
         margin-bottom: -1px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        display: inline-block;
+        &:before {
+          content: '';
+          background-color: $blue;
+          position: absolute;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+          transform: translateX(-100%);
+          transition: transform $cubic 0.6s;
+        }
+        &.yellow:before {
+          background-color: $yellow;
+        }
+        &.red:before {
+          background-color: red;
+        }
+        &.greenbg:before {
+          background-color: $green;
+        }
+        &.cyan:before {
+          background-color: $cyan;
+        }
       }
     }
   }
@@ -424,6 +450,11 @@ hr {
       // left: 11%;
       & p:before {
         transform: translate3d(100%,0,0);
+      }
+      & h3 {
+        &:before {
+          transform: translateX(0%);
+        }
       }
     }
   }
@@ -497,7 +528,7 @@ hr {
   position: fixed;
   opacity: 0;
   top: 0;
-  transition: all 3s $cubic, opacity 0.5s ease;
+  transition: all 1.5s $cubic, opacity 0.5s ease;
   z-index: -1;
   transform: translateX(100%);
   &--active {
