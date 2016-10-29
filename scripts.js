@@ -1,3 +1,12 @@
+var projects = {
+  "amplifier": "invertuals",
+  "invertuals": "city",
+  "city": "gardenly",
+  "gardenly": "kidup",
+  "kidup": "diverse",
+  "diverse": "amplifier"
+};
+
 var st = 0, ph = 0, sdegree = 0;
 $('.page').scroll(function(event){
   var st = $(this).scrollTop();
@@ -23,18 +32,19 @@ $(document).ready(function() {
       var self = this;
       setTimeout(function(){
         $(self).addClass('faded');
-      }, i*400);
+      }, i*200);
     });
     $('.fade-in').each(function(i){
       var self = this;
       setTimeout(function(){
         $(self).addClass('faded');
-      }, 600+i*400);
+      }, 1000+i*400);
     });
 });
 
 // Page Intro Animations
 function startPageIntro(identifier){
+  console.log(identifier);
   $(".page__header__image").css("transform", "translateY(0%)"); // Reset parallax.
   if (identifier.length != 0) { // If Identifier Exists
     $('#' + identifier + ' .page-slide-in').each(function(i){
@@ -68,10 +78,14 @@ function closePage(){
   $(".page-slide-in").removeClass("page-faded"); // Reset Animation
 }
 // Slide next project
-function slideNextProject(from, to){
+function slideNextProject() {
+  var from = window.location.hash.substring(1);
+  console.log(from);
+  var to = projects[from];
+  console.log(to);
   window.location = "#" + to; // Set hashtag
-  fromObject = $("#" + from);
-  toObject = $("#" + to);
+  var fromObject = $("#" + from);
+  var toObject = $("#" + to);
   toObject.addClass('page--active'); // Activates new screen
   fromObject.removeClass('page--active');
   $(".page__header__image").removeClass("page-faded"); // Reset Animation Before Start
