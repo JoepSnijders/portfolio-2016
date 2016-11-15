@@ -5,14 +5,14 @@ $(document).ready(function() {
   screenHeight = $(window).height();
   screenWidth = $(window).width();
   updateScreenSize(screenWidth, screenHeight);
-
+  $("#home").addClass("active");
   // Starting animation
-  $("#home .slide-in").each(function(index){
-    var self = this;
-    setTimeout(function(){
-      $(self).addClass("animated");
-    }, 400*index)
-  });
+  // $("#home .slide-in").each(function(index){
+  //   var self = this;
+  //   setTimeout(function(){
+  //     $(self).addClass("animated");
+  //   }, 400*index)
+  // });
 });
 // Change screen size
 $( window ).resize(function() {
@@ -45,6 +45,31 @@ $(document).keydown(function(e) {
     e.preventDefault(); // Prevent down scroll.
 });
 
+// Scroll detection
+var allowScroll = true;
+$('.index-pages').bind('mousewheel', function(e){
+  e.preventDefault();
+  if (allowScroll) {
+    if(e.originalEvent.wheelDelta < 0) { // Scroll up
+        allowScroll = false;
+        selectNextScreen();
+        setTimeout(function(){
+          allowScroll = true;
+        }, 1000);
+    } else { // Scroll down
+      allowScroll = false;
+      selectPrevScreen();
+      setTimeout(function(){
+        allowScroll = true;
+      }, 1000);
+    }
+    //Prevent page fom scrolling
+    return false;
+  } else { // Do not allow scroll
+    return false;
+  }
+});
+
 function selectNextScreen(){
   // Current status
   var thisScreen = $(".screen.active");
@@ -70,9 +95,14 @@ function selectPrevScreen(){
   }
 }
 
+// Project Pages
 function openProject(name){
-  $(".single-pages").addClass("active");
+  console.log(name);
+  $("#" + name).addClass("active");
+  $("#" + name).scrollTop(0); // Reset scroll position to top.
+  $(".return").addClass("active");
 }
-function closeProject(name){
-  $(".single-pages").removeClass("active");
+function closeProject(){
+  $(".single-page").removeClass("active");
+  $(".return").removeClass("active");
 }

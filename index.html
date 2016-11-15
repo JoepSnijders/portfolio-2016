@@ -13,14 +13,19 @@
     <div class="menu__line"></div>
     <div class="menu__line"></div>
   </div>
+  <div class="return" onclick="closeProject()">
+    <span class="return__arrow"></span>
+    Back
+  </div>
 
   <div class="window">
   <!-- Index Pages -->
     <div class="index-pages">
-      <div id="home" class="screen active">
+      <!-- Home -->
+      <div id="home" class="screen">
         <div class="screen__content">
           <div class="container">
-            <div class="slide-in">
+            <div class="slide-in big">
               <h1>Joep Snijders</h1>
             </div>
             <div class="row">
@@ -39,92 +44,341 @@
           </div>
         </div>
       </div>
+      <!-- Envirolist -->
       <div class="project screen">
         <div class="screen__content">
           <div class="container">
             <div class="row">
               <div class="col-sm-7">
-                <h2>Envirolist</h2>
-                <div class="row">
-                  <div class="col-sm-2">
+                <div class="slide-in big">
+                  <h2>Envirolist</h2>
+                </div>
+                <div class="row slide-in">
+                  <div class="col-md-9">
+                    <p class="sixteen">Help the environment by volunteering anywhere in the world.</p>
                   </div>
-                  <div class="col-sm-10">
-                    <p>A designer and developer from the Netherlands, who focuses on interactive experiences & human-centered design.</p>
+                </div>
+                <div class="row slide-in">
+                  <div class="col-md-10">
+                    <div class="screen__content__details">
+                      <hr>
+                      <div class="screen__content__details__inner">
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <p class="bold small">Role</p>
+                            <p class="small">UX + Development</p>
+                          </div>
+                          <div class="col-sm-4">
+                            <p class="bold small">Agency</p>
+                            <p class="small">Personal project</p>
+                          </div>
+                          <div class="col-sm-3">
+                            <p class="bold small">Year</p>
+                            <p class="small">2016</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-5">
-                <img src="img/beach.jpg" width="100%" alt="">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-1">
-                <p class="bold small">Role</p>
-                <p class="small">Design</p>
-              </div>
-              <div class="col-sm-2">
-                <p class="bold small">Agency</p>
-                <p class="small">Personal project</p>
-              </div>
-              <div class="col-sm-1">
-                <p class="bold small">Year</p>
-                <p class="small">2016</p>
-              </div>
-            </div>
-          </div>
-          <div class="btn-container">
-            <div class="btn">View Case</div>
-          </div>
-          <div class="line"></div>
-        </div>
-      </div>
-      <div class="project screen">
-        <div class="screen__content">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-7">
-                <h2>Amplifier</h2>
-                <div class="row">
-                  <div class="col-sm-2">
-                  </div>
-                  <div class="col-sm-10">
-                    <p>A designer and developer from the Netherlands, who focuses on interactive experiences & human-centered design.</p>
-                  </div>
+              <div class="col-sm-5 slide-in">
+                <div class="screen__content__thumb" onclick="openProject('envirolist')">
+                  <div class="screen__content__thumb__inner" style="background-image: url('img/beach.jpg')"></div>
                 </div>
               </div>
-              <div class="col-sm-5">
-                <img src="img/amplifier.jpg" width="100%" alt="">
-              </div>
             </div>
-            <div class="row">
-              <div class="col-sm-1">
-                <p class="bold small">Role</p>
-                <p class="small">Design</p>
-              </div>
-              <div class="col-sm-2">
-                <p class="bold small">Agency</p>
-                <p class="small">Personal project</p>
-              </div>
-              <div class="col-sm-1">
-                <p class="bold small">Year</p>
-                <p class="small">2016</p>
-              </div>
-            </div>
-          </div>
-          <div class="btn-container">
-            <div class="btn">View Case</div>
-          </div>
-          <div class="line"></div>
-        </div>
-      </div>
-      <div id="footer" class="screen">
 
+          </div>
+          <div class="btn-container slide-in big">
+            <div class="btn" onclick="openProject('envirolist')">View Case</div>
+          </div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <!-- MSc -->
+      <div class="project screen">
+        <div class="screen__content">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="slide-in big">
+                  <h2>Human Technology Interaction</h2>
+                </div>
+                <div class="row slide-in">
+                  <div class="col-md-9">
+                    <p class="sixteen">MSc Final thesis: Allowing for Collaborative Control over Smart Public Lighting.</p>
+                  </div>
+                </div>
+                <div class="row slide-in">
+                  <div class="col-md-10">
+                    <div class="screen__content__details">
+                      <hr>
+                      <div class="screen__content__details__inner">
+                        <div class="row">
+                          <div class="col-sm-3">
+                            <p class="bold small">Role</p>
+                            <p class="small">Research</p>
+                          </div>
+                          <div class="col-sm-2">
+                            <p class="bold small">Year</p>
+                            <p class="small">2016</p>
+                          </div>
+                          <div class="col-sm-6">
+                            <p class="bold small">Graduation</p>
+                            <p class="small">Eindhoven University of Technology</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-5 slide-in">
+                <div class="screen__content__thumb" onclick="openProject('city')">
+                  <div class="screen__content__thumb__inner" style="background-image: url('img/city.jpg')"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="btn-container slide-in big">
+            <div class="btn" onclick="openProject('envirolist')">View Case</div>
+          </div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <!-- Amplifier -->
+      <div class="project screen">
+        <div class="screen__content">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="slide-in big">
+                  <h2>Amplifier</h2>
+                </div>
+                <div class="row slide-in">
+                  <div class="col-md-9">
+                    <p class="sixteen">I built a platform that allows musicians to find each other, post vacancies for positions in their band and look for bands that play the music you love.</p>
+                  </div>
+                </div>
+                <div class="row slide-in">
+                  <div class="col-md-10">
+                    <div class="screen__content__details">
+                      <hr>
+                      <div class="screen__content__details__inner">
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <p class="bold small">Role</p>
+                            <p class="small">UX + Development</p>
+                          </div>
+                          <div class="col-sm-4">
+                            <p class="bold small">Agency</p>
+                            <p class="small">Personal project</p>
+                          </div>
+                          <div class="col-sm-3">
+                            <p class="bold small">Year</p>
+                            <p class="small">2015</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-5 slide-in">
+                <div class="screen__content__thumb" onclick="openProject('amplifier')">
+                  <div class="screen__content__thumb__inner" style="background-image: url('img/amplifier.jpg')"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-container slide-in big">
+            <div class="btn" onclick="openProject('envirolist')">View Case</div>
+          </div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <!-- Dutch Invertuals Collected -->
+      <div class="project screen">
+        <div class="screen__content">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="slide-in big">
+                  <h2>Dutch Invertuals Collected</h2>
+                </div>
+                <div class="row slide-in">
+                  <div class="col-md-9">
+                    <p class="sixteen">The Dutch Invertuals are a selected group of passionate and vision driven dutch designers. Together with Eindhoven’s design studio Edhv we created a platform on which the design items are displayed.</p>
+                  </div>
+                </div>
+                <div class="row slide-in">
+                  <div class="col-md-10">
+                    <div class="screen__content__details">
+                      <hr>
+                      <div class="screen__content__details__inner">
+                        <div class="row">
+                          <div class="col-sm-5">
+                            <p class="bold small">Role</p>
+                            <p class="small">Lead UX + Lead Developer</p>
+                          </div>
+                          <div class="col-sm-3">
+                            <p class="bold small">Agency</p>
+                            <p class="small">Edhv</p>
+                          </div>
+                          <div class="col-sm-2">
+                            <p class="bold small">Year</p>
+                            <p class="small">2013</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-5 slide-in">
+                <div class="screen__content__thumb" onclick="openProject('invertuals')">
+                  <div class="screen__content__thumb__inner" style="background-image: url('img/invertuals.jpg')"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-container slide-in big">
+            <div class="btn" onclick="openProject('envirolist')">View Case</div>
+          </div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div id="footer" class="screen">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="slide-in big">
+                <h3>Designing future <br />technology</h3>
+              </div>
+              <div class="slide-in">
+                <p>
+                  A designer and developer from the Netherlands, who focuses on interactive experiences & human-centered design. A designer and developer from the Netherlands, who focuses on interactive experiences & human-centered design. A designer and developer from the Netherlands, who focuses on interactive experiences & human-centered design.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6"></div>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- Single Pages -->
-    <div class="single-pages">
-
+    <!-- Envirolist -->
+    <div id="envirolist" class="single-page">
+      <section class="single-page__intro">
+        <div class="single-page__intro__main-image" style="background-image: url('img/beach.jpg')"></div>
+        <div class="single-page__intro__main-text">
+          <div class="slide-in big">
+            <h3>Envirolist</h3>
+          </div>
+          <div class="slide-in">
+            <div class="line"></div>
+            <p>
+              A designer and developer from the Netherlands, who focuses on interactive experiences & human-centered design. A designer and developer from the Netherlands, who focuses on interactive experiences & human-centered design.
+            </p>
+            <br>
+            <br>
+          </div>
+          <div class="row slide-in">
+            <div class="col-sm-3">
+              <p class="bold small">Role</p>
+              <p class="small">Design</p>
+            </div>
+            <div class="col-sm-4">
+              <p class="bold small">Agency</p>
+              <p class="small">Personal project</p>
+            </div>
+            <div class="col-sm-3">
+              <p class="bold small">Year</p>
+              <p class="small">2016</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="single-page__second" style="background-color: #00A0F3; background-image: url('img/blue-map.jpg')">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-7">
+              <h4>Together we are strong</h4>
+              <p class="sixteen">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies mauris a lacinia tincidunt. Vivamus risus metus, venenatis eget ornare vel, tincidunt in odio. Quisque lobortis sed orci sit amet accumsan. Quisque ullamcorper eros vitae orci porttitor, sed elementum metus commodo.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="single-page__third">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <p class="bold">Nice title</p>
+              <p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies mauris a lacinia tincidunt. Vivamus risus metus, venenatis eget ornare vel, tincidunt in odio. Quisque lobortis sed orci sit amet accumsan.</p>
+            </div>
+            <div class="col-sm-8">
+              <img src="img/list.jpg" width="100%" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="single-page__fourth">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8">
+              <img src="img/turtle.jpg" width="100%" alt="">
+            </div>
+            <div class="col-sm-4">
+              <p class="bold">Nice title</p>
+              <p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies mauris a lacinia tincidunt. Vivamus risus metus, venenatis eget ornare vel, tincidunt in odio. Quisque lobortis sed orci sit amet accumsan.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="single-page__video">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+              <div class="single-page__video__vid"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="single-page__other">
+        <div class="container">
+          <p class="bold">Other projects</p>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="single-page__other__project" onclick="closeProject(); openProject('amplifier');">
+                <div class="single-page__other__project__container">
+                  <div class="single-page__other__project__container__thumb" style="background-image: url('img/amplifier.jpg')"></div>
+                </div>
+                <div class="single-page__other__project__content">
+                  <h5>Amplifier</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="single-page__other__project" onclick="closeProject(); openProject('invertuals');">
+                <div class="single-page__other__project__container">
+                  <div class="single-page__other__project__container__thumb" style="background-image: url('img/invertuals.jpg')"></div>
+                </div>
+                <div class="single-page__other__project__content">
+                  <h5>Dutch Invertuals Collected</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="single-page__footer">
+        <div class="container">
+        </div>
+      </section>
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
