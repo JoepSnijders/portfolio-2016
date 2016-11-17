@@ -3,7 +3,6 @@ var screenHeight;
 // Initial Load
 $(document).ready(function() {
   if (window.location.hash) {
-    console.log(window.location.hash);
     redirect(window.location.hash);
   }
 
@@ -54,7 +53,7 @@ $(document).keydown(function(e) {
 
 // Scroll detection
 var allowScroll = true;
-$('.index-pages').bind('mousewheel', function(e){
+$('.index-pages').bind('mousewheel DOMMouseScroll', function(e){
   e.preventDefault();
   if (allowScroll) {
     if(e.originalEvent.wheelDelta < 0) { // Scroll up
@@ -109,7 +108,6 @@ function redirect(hash) {
 
 // Project Pages
 function openProject(name){
-  console.log(name);
   window.location = "#" + name;
   $("#" + name).addClass("active");
   $("#" + name).scrollTop(0); // Reset scroll position to top.
