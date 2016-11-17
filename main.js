@@ -2,6 +2,12 @@ var screenWidth;
 var screenHeight;
 // Initial Load
 $(document).ready(function() {
+  if (window.location.hash) {
+    console.log(window.location.hash);
+    redirect(window.location.hash);
+  }
+
+
   screenHeight = $(window).height();
   screenWidth = $(window).width();
   updateScreenSize(screenWidth, screenHeight);
@@ -14,6 +20,7 @@ $(document).ready(function() {
   //   }, 400*index)
   // });
 });
+
 // Change screen size
 $( window ).resize(function() {
   screenHeight = $(window).height();
@@ -95,14 +102,21 @@ function selectPrevScreen(){
   }
 }
 
+function redirect(hash) {
+  hash = window.location.hash.substring(1);
+  openProject(hash);
+}
+
 // Project Pages
 function openProject(name){
   console.log(name);
+  window.location = "#" + name;
   $("#" + name).addClass("active");
   $("#" + name).scrollTop(0); // Reset scroll position to top.
   $(".return").addClass("active");
 }
 function closeProject(){
+  history.pushState("", document.title, window.location.pathname + window.location.search); // Reset Hash
   $(".single-page").removeClass("active");
   $(".return").removeClass("active");
 }
