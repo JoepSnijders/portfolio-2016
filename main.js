@@ -6,24 +6,16 @@ $(document).ready(function() {
     redirect(window.location.hash);
   }
 
-
-  screenHeight = $(window).height();
-  screenWidth = $(window).width();
+  screenHeight = $(window).height(); // Update Screen Size
+  screenWidth = $(window).width(); // Update Screen Size
   updateScreenSize(screenWidth, screenHeight);
   $("#home").addClass("active");
-  // Starting animation
-  // $("#home .slide-in").each(function(index){
-  //   var self = this;
-  //   setTimeout(function(){
-  //     $(self).addClass("animated");
-  //   }, 400*index)
-  // });
 });
 
 // Change screen size
 $( window ).resize(function() {
-  screenHeight = $(window).height();
-  screenWidth = $(window).width();
+  screenHeight = $(window).height(); // Update Screen Size
+  screenWidth = $(window).width(); // Update Screen Size
   updateScreenSize(screenWidth, screenHeight);
 });
 
@@ -53,10 +45,10 @@ $(document).keydown(function(e) {
 
 // Scroll detection
 var allowScroll = true;
-$('.index-pages').bind('mousewheel DOMMouseScroll', function(e){
+$('.index-pages').on('mousewheel DOMMouseScroll', function(e){
   e.preventDefault();
   if (allowScroll) {
-    if(e.originalEvent.wheelDelta < 0) { // Scroll up
+    if(e.originalEvent.wheelDelta < 0 || e.originalEvent.detail > 0) { // Scroll up (Chome or Firefox)
         allowScroll = false;
         selectNextScreen();
         setTimeout(function(){
@@ -69,9 +61,8 @@ $('.index-pages').bind('mousewheel DOMMouseScroll', function(e){
         allowScroll = true;
       }, 1000);
     }
-    //Prevent page fom scrolling
     return false;
-  } else { // Do not allow scroll
+  } else { // Do not allow scroll yet
     return false;
   }
 });
@@ -117,4 +108,7 @@ function closeProject(){
   history.pushState("", document.title, window.location.pathname + window.location.search); // Reset Hash
   $(".single-page").removeClass("active");
   $(".return").removeClass("active");
+}
+function toggleMenu() {
+  $("#menu").toggleClass("active");
 }

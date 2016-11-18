@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="dist/responsive.css">
 </head>
 <body>
-  <div class="menu">
+  <div class="menu" onclick="toggleMenu()">
     <div class="menu__line"></div>
     <div class="menu__line"></div>
     <div class="menu__line"></div>
@@ -20,7 +20,7 @@
   </div>
 
   <div class="window">
-  <!-- Index Pages -->
+    <!-- Index Pages -->
     <div class="index-pages">
       <!-- Home -->
       <div id="home" class="screen">
@@ -255,24 +255,45 @@
       <div id="footer" class="screen">
         <div class="container">
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-7">
               <div class="slide-in big">
                 <h3>Designing future <br />technology</h3>
               </div>
               <div class="slide-in">
                 <p>
-                  A designer and developer from the Netherlands, who focuses on interactive experiences & human-centered design. A designer and developer from the Netherlands, who focuses on interactive experiences & human-centered design. A designer and developer from the Netherlands, who focuses on interactive experiences & human-centered design.
+                  Joep Snijders is a (ux-) designer, developer and human-technology interaction specialist (MSc). I recently graduated from the University of Technology Eindhoven, and am currently looking for new adventures. I have a broad expertise in both designing and developing mobile and web applications. In addition, I have experience in participatory design and emotional design.
+                  <br />
+                  I have a special place in my heart for intuitive applications that 'just work'. To accomplish this I apply my background in psychology and my passion for design to achieve the ultimate combination of usability, engagement and aesthetics. I am currently available for freelance projects and long-term engagements. Interested in working together? Check out my CV or shoot me an email.
                 </p>
               </div>
             </div>
-            <div class="col-sm-6"></div>
+            <div class="col-sm-5"></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <p class="bold">Email</p>
+              <p>
+                <a href="mailto:joepsnijders@me.com">joepsnijders[at]me.com</a>
+              </p>
+            </div>
+            <div class="col-sm-3">
+              <p class="bold">Telephone</p>
+              <p>+31 6 24 15 37 20</p>
+            </div>
+            <div class="col-sm-4">
+              <p class="bold">Social</p>
+              <p>
+                <a href="https://www.facebook.com/Joep-Snijders-Ontwerp-344760042309635/?fref=ts" target="_blank">Facebook</a>
+                <a href="https://twitter.com/JoepSnijder" target="_blank">Twitter</a>
+                <a href="https://www.linkedin.com/in/joep-snijders-61151248?" target="_blank">LinkedIn</a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Single Pages -->
-    <!-- Envirolist -->
     <div id="envirolist" class="single-page">
       <section class="single-page__intro">
         <div class="single-page__intro__main-image" style="background-image: url('img/beach.jpg')"></div>
@@ -722,6 +743,40 @@
         </div>
       </section>
     </div>
+
+    <!-- Menu -->
+    <div id="menu" class="menu-page">
+      <div class="menu-page__content">
+        <div class="container">
+          <a class="slide-in" href="#" onclick="toggleMenu(); closeProject(); openProject('envirolist')">
+            <h3>Envirolist</h3>
+          </a>
+          <a class="slide-in" href="#" onclick="toggleMenu(); closeProject(); openProject('city')">
+            <h3>Human Technology Interaction</h3>
+          </a>
+          <a class="slide-in" href="#" onclick="toggleMenu(); closeProject(); openProject('amplifier')">
+            <h3>Amplifier</h3>
+          </a>
+          <a class="slide-in" href="#" onclick="toggleMenu(); closeProject(); openProject('invertuals')">
+            <h3>Dutch Invertuals Collected</h3>
+          </a>
+        </div>
+      </div>
+      <div class="menu-page__footer slide-in big">
+        <div class="container">
+          <p>
+            <a href="mailto:joepsnijders@me.com">joepsnijders[at]me.com</a>
+            |
+            <a href="https://www.facebook.com/Joep-Snijders-Ontwerp-344760042309635/?fref=ts" target="_blank">Facebook</a>
+            |
+            <a href="https://twitter.com/JoepSnijder" target="_blank">Twitter</a>
+            |
+            <a href="https://www.linkedin.com/in/joep-snijders-61151248?" target="_blank">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="main.js" charset="utf-8"></script>
