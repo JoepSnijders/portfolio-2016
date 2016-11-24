@@ -46,6 +46,7 @@ $(document).keydown(function(e) {
 // Scroll detection
 var allowScroll = true;
 $('.index-pages').on('mousewheel DOMMouseScroll', function(e){
+  console.log('scrolling..');
   e.preventDefault();
   if (allowScroll) {
     if(e.originalEvent.wheelDelta < 0 || e.originalEvent.detail > 0) { // Scroll up (Chome or Firefox)
@@ -53,18 +54,45 @@ $('.index-pages').on('mousewheel DOMMouseScroll', function(e){
         selectNextScreen();
         setTimeout(function(){
           allowScroll = true;
-        }, 1000);
+        }, 1100);
     } else { // Scroll down
       allowScroll = false;
       selectPrevScreen();
       setTimeout(function(){
         allowScroll = true;
-      }, 1000);
+      }, 1100);
     }
     return false;
   } else { // Do not allow scroll yet
     return false;
   }
+});
+// Touch detection
+var lastY;
+$('.index-pages').bind('touchmove', function (e){
+    if (allowScroll) {
+      var currentY = e.originalEvent.touches[0].clientY;
+      if(currentY > lastY){
+          // moved down
+          console.log('down');
+          allowScroll = false;
+          selectPrevScreen();
+          setTimeout(function(){
+            allowScroll = true;
+          }, 1100);
+      }else if(currentY < lastY){
+          // moved up
+          console.log('up');
+          allowScroll = false;
+          selectNextScreen();
+          setTimeout(function(){
+            allowScroll = true;
+          }, 1100);
+      }
+      lastY = currentY;
+    } else {
+      return false;
+    }
 });
 
 function selectNextScreen(){

@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'Domaine Display';
+  src: url(fonts/ddp-b.otf); }
+@font-face {
+  font-family: 'Apercu';
+  src: url(fonts/a-l.otf);
+  font-weight: 100; }
+@font-face {
+  font-family: 'Apercu';
+  src: url(fonts/a-b.otf);
+  font: bold; }
 body {
   font-family: 'Apercu', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased; }
@@ -233,8 +244,8 @@ a .btn {
 .single-page {
   transform: translateX(-100%);
   overflow: scroll;
-  opacity: 0;
-  transition: 2s cubic-bezier(0.19, 1, 0.22, 1) transform, 1s ease opacity;
+  opacity: 1;
+  transition: 1.4s cubic-bezier(0.19, 1, 0.22, 1) transform, 1s ease opacity;
   background-color: white;
   position: fixed;
   z-index: 10;
@@ -345,11 +356,6 @@ a .btn {
       transform: scale3d(1.05, 1.05, 1.05); }
   .single-page__other__project__content h5 {
     margin: 20px 0 5px 0; }
-
-.single-page__footer {
-  margin-top: 80px;
-  background-color: black;
-  height: 100vh; }
 
 .menu-page {
   position: fixed;

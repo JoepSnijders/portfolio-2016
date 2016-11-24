@@ -10,6 +10,8 @@
 
     /* Small Devices, Tablets */
     @media only screen and (max-width : 768px) {
+      .container { width: 100%; }
+      .screen__content__details { display: none; }
       .single-page__intro {
         height: auto;
       }
@@ -29,6 +31,8 @@
     @media only screen and (max-width : 480px) {
       #home h1 { font-size: 35px; }
       .screen h2 { font-size: 35px; }
+      h3 { font-size: 25px; }
+      .menu-page__footer { bottom: 10px; }
       .screen__content__details { display: none; }
       .btn-container { bottom: 0; }
       .single-page__intro__main-image {

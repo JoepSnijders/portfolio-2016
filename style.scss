@@ -1,3 +1,6 @@
+// Import Fonts
+@import 'fonts';
+
 // VARS
 $cubic: cubic-bezier(.19,1,.22,1);
 
@@ -253,8 +256,8 @@ a .btn {
 .single-page {
   transform: translateX(-100%);
   overflow: scroll;
-  opacity: 0;
-  transition: 2s $cubic transform, 1s ease opacity;
+  opacity: 1;
+  transition: 1.4s $cubic transform, 1s ease opacity;
   background-color: white;
   position: fixed;
   z-index: 10;
@@ -373,11 +376,6 @@ a .btn {
       }
     }
   }
-}
-.single-page__footer {
-  margin-top: 80px;
-  background-color: black;
-  height: 100vh;
 }
 
 // Menu
