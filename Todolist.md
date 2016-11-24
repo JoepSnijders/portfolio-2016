@@ -1,8 +1,12 @@
 # Todolist Portfolio
 
-- [ ] Finish content editing
+- [ ] Envirolist content
+- [ ] Amplifier content + vid
+
+- [ ] Button hover animations
+
 - [ ] Finish footer design
 - [ ] H3 hovers
+
 - [ ] Responsive check (on real phone)
 - [ ] Play video after click
-- [x] To hamburger or not to hamburger?
