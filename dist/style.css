@@ -63,25 +63,41 @@ hr {
   margin: 1em 0;
   padding: 0; }
 
+.btn--absolute {
+  position: absolute; }
+
 .btn {
+  overflow: hidden;
   cursor: pointer;
   height: 53px;
   width: 220px;
   padding: 15px 25px;
-  border: 1px solid #D92E8B;
+  border: 1px solid whitesmoke;
   background-color: white;
   z-index: 1;
   font-weight: bold;
   line-height: 23px;
   text-align: center;
-  transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1) all; }
+  transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1) all;
+  color: #333; }
+  .btn:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #213875;
+    transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1) transform;
+    transform: translateY(105%);
+    z-index: -1; }
   .btn:hover {
-    background-color: #D92E8B;
-    border-color: #D92E8B;
     color: white; }
+    .btn:hover:after {
+      transform: translateY(0%); }
 
 a .btn {
-  color: inherit;
+  color: #333;
   text-decoration: none; }
 
 .slide-in {
