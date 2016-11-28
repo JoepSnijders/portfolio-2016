@@ -5,11 +5,15 @@ $(document).ready(function() {
   if (window.location.hash) {
     redirect(window.location.hash);
   }
-
   screenHeight = $(window).height(); // Update Screen Size
   screenWidth = $(window).width(); // Update Screen Size
   updateScreenSize(screenWidth, screenHeight);
   $("#home").addClass("active");
+  if(isTouchDevice()){
+    console.log('Touch Device!');
+    $("body").addClass("touch");
+    $(".screen").addClass("active");
+  }
 });
 
 // Change screen size
@@ -67,33 +71,12 @@ $('.index-pages').on('mousewheel DOMMouseScroll', function(e){
     return false;
   }
 });
-// Touch detection
-var lastY;
-$('.index-pages').bind('touchmove', function (e){
-    if (allowScroll) {
-      var currentY = e.originalEvent.touches[0].clientY;
-      if(currentY > lastY){
-          // moved down
-          console.log('down');
-          allowScroll = false;
-          selectPrevScreen();
-          setTimeout(function(){
-            allowScroll = true;
-          }, 1100);
-      }else if(currentY < lastY){
-          // moved up
-          console.log('up');
-          allowScroll = false;
-          selectNextScreen();
-          setTimeout(function(){
-            allowScroll = true;
-          }, 1100);
-      }
-      lastY = currentY;
-    } else {
-      return false;
-    }
-});
+
+// Touch?
+function isTouchDevice() {
+  return 'ontouchstart' in window        // works on most browsers
+      || navigator.maxTouchPoints;       // works on IE10/11 and Surface
+};
 
 function selectNextScreen(){
   // Current status

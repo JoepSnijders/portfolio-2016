@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="return" width="27px" height="15px" viewBox="0 0 27 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="New-2" transform="translate(-1211.000000, -53.000000)" stroke="#333333">
+            <g id="Back" transform="translate(1193.000000, 35.000000)">
+                <g id="Group-6">
+                    <g id="Group-7" transform="translate(18.000000, 18.000000)">
+                        <g id="Arrow">
+                            <path d="M1,8 L26,8" id="Line"></path>
+                            <path d="M0.661165235,7.83883476 L7.73223305,0.767766953" id="Line"></path>
+                            <path d="M0.60428047,7.86176109 L7.67534828,14.9328289" id="Line"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
