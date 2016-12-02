@@ -60,7 +60,7 @@ hr {
   position: absolute;
 }
 .btn {
-  overflow: hidden;
+  overflow: hidden !important; // Fix for iOS?
   cursor: pointer;
   height: 53px;
   width: 220px;
@@ -275,6 +275,7 @@ a .btn {
 .single-page {
   transform: translateX(-100%);
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   opacity: 1;
   transition: 1.4s $cubic transform, 1s ease opacity;
   background-color: white;

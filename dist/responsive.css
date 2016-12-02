@@ -1,14 +1,23 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
   /* Touch Screen Save */
-  .touch .window { overflow: visible; }
-  .touch .index-pages { overflow: visible; }
+  .touch .window {
+    overflow-y: visible !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  .touch .index-pages {
+    overflow-y: visible !important;
+    -webkit-overflow-scrolling: touch;
+  }
   .touch .screen {
     position: static !important;
     overflow: visible;
+    -webkit-overflow-scrolling: touch;
     padding: 20% 0;
     height: auto !important;
   }
+  .touch .btn { overflow: hidden; }
+  .touch .btn-container { padding: 1px 20px !important; bottom: 0px !important; }
 }
 
 /* Medium Devices, Desktops */
@@ -18,8 +27,6 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-  
-
   .screen__content__details { display: none; }
   .single-page__intro { height: auto; }
   .single-page__intro__main-image {

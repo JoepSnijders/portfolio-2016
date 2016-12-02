@@ -67,7 +67,7 @@ hr {
   position: absolute; }
 
 .btn {
-  overflow: hidden;
+  overflow: hidden !important;
   cursor: pointer;
   height: 53px;
   width: 220px;
@@ -261,6 +261,7 @@ a .btn {
 .single-page {
   transform: translateX(-100%);
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   opacity: 1;
   transition: 1.4s cubic-bezier(0.19, 1, 0.22, 1) transform, 1s ease opacity;
   background-color: white;
