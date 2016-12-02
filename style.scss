@@ -192,9 +192,6 @@ a .btn {
       height: 350px;
       overflow: hidden;
       position: relative;
-      &:hover .screen__content__thumb__inner {
-        transform: scale3d(1, 1, 1);
-      }
       &__inner {
         background-color: #eee;
         width: 100%;
@@ -202,7 +199,12 @@ a .btn {
         background-size: cover;
         background-position: left center;
         transition: 1.7s cubic-bezier(0.19, 1, 0.22, 1) all;
-        transform: scale3d(1.05, 1.05, 1.05);
+        transition-delay: 0s !important;
+        transform: scale3d(1.05, 1.05, 1.05) !important;
+      }
+      &:hover .screen__content__thumb__inner {
+        transform: scale3d(1.02, 1.02, 1.02) !important;
+
       }
     }
   }

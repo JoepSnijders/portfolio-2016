@@ -8,12 +8,12 @@ $(document).ready(function() {
   screenHeight = $(window).height(); // Update Screen Size
   screenWidth = $(window).width(); // Update Screen Size
   updateScreenSize(screenWidth, screenHeight);
-  $("#home").addClass("active");
   if(isTouchDevice()){
     console.log('Touch Device!');
     $("body").addClass("touch");
     $(".screen").addClass("active");
   }
+  $("#home").addClass("active");
 });
 
 // Change screen size
