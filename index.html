@@ -53,7 +53,7 @@
             <div class="row">
               <div class="col-sm-7">
                 <div class="slide-in big">
-                  <h2>Envirolist</h2>
+                  <h2 onclick="openProject('envirolist')">Envirolist</h2>
                 </div>
                 <div class="row slide-in">
                   <div class="col-md-9">
@@ -90,7 +90,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <div class="btn-container slide-in big">
             <div class="btn" onclick="openProject('envirolist')">View Case</div>
@@ -105,7 +104,7 @@
             <div class="row">
               <div class="col-sm-7">
                 <div class="slide-in big">
-                  <h2>Human Technology Interaction</h2>
+                  <h2 onclick="openProject('city')">Human Technology Interaction</h2>
                 </div>
                 <div class="row slide-in">
                   <div class="col-md-9">
@@ -142,7 +141,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <div class="btn-container slide-in big">
             <div class="btn" onclick="openProject('city')">View Case</div>
@@ -157,7 +155,7 @@
             <div class="row">
               <div class="col-sm-7">
                 <div class="slide-in big">
-                  <h2>Amplifier</h2>
+                  <h2 onclick="openProject('amplifier')">Amplifier</h2>
                 </div>
                 <div class="row slide-in">
                   <div class="col-md-9">
@@ -208,7 +206,7 @@
             <div class="row">
               <div class="col-sm-7">
                 <div class="slide-in big">
-                  <h2>Dutch Invertuals Collected</h2>
+                  <h2 onclick="openProject('invertuals')">Dutch Invertuals Collected</h2>
                 </div>
                 <div class="row slide-in">
                   <div class="col-md-9">
@@ -304,8 +302,8 @@
           <div class="slide-in">
             <div class="line"></div>
             <p class="sixteen">
-              Envirolist is a project I started when travelling in south-east Asia. During my travels, I met two groups: people that run a volunteering initiative and people that were travelling around working for or helping these initiatives.
-              Talking to both of these groups, I formed the idea of creating a platform that makes it easy to find these volunteering initiatives anywhere in the world. Envirolist offers travellers an easy overview of environmental volunteering work (paid, free or fee required), and offers initiatives a great place to post their vacancies. The platform enables people around the world to start getting involved with volunteering work, and together help the environment. I am currently still working on this project.
+              Envirolist is a project I started when travelling in south-east Asia. During my travels, I met people that run volunteering initiatives to help the environment, and I met people that were travelling around helping these initiatives.
+              This is when I formed the idea of creating a platform that makes it easy to find these initiatives anywhere in the world. Envirolist enables people around the world to start getting involved with volunteering work, and together help the environment. I am currently still working on this project.
             </p>
             <br>
             <br>
@@ -326,14 +324,18 @@
           </div>
         </div>
       </section>
-      <section class="single-page__second" style="background-color: #00A0F3; background-image: url('img/blue-map.jpg')">
+      <section class="single-page__second" style="background-color: #2E383E;"> 
+        <!-- background-image: url('img/blue-map.jpg') -->
         <div class="container">
           <div class="row">
-            <div class="col-sm-7">
-              <h4>Technology used</h4>
+            <div class="col-md-4">
+              <p class="bold">The Design</p>
               <p class="sixteen">
-                The Envirolist platform consists of a front-end and a back-end. The front-end was done using the React javascript library, and the back-end was programmed in NodeJS (ExpressJS) and MongoDB. The back-end provides API end-points to communicate with the front-end application. To create a filterable map, I used the Google Maps API.
+                During my conversations with the travelling group, I noticed that most of the times usability was mentioned as a key problem in finding new locations. For this reason the UX of the platform focusses on usability: enforcing a clean layout that uses white-space, colour contrast and readability.
               </p>
+            </div>
+            <div class="col-md-7 col-md-offset-1">
+              <iframe src="https://player.vimeo.com/video/191919806" width="100%" height="320" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
           </div>
         </div>
@@ -342,13 +344,13 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-4">
-              <p class="bold">The Design</p>
-              <p class="small">
-                During my conversations with the travelling group, I noticed that most of the times usability was mentioned as a key problem in finding new locations. For this reason the UX of the platform focusses on usability: enforcing a clean layout that uses white-space, colour contrast and readability.
+              <p class="bold">Technology</p>
+              <p class="sixteen">
+                The Envirolist platform consists of a front-end and a back-end. The front-end was done using the React javascript library, and the back-end was programmed in NodeJS (ExpressJS) and MongoDB. The back-end provides API end-points to communicate with the front-end application. To create a filterable map, I used the Google Maps API.
               </p>
             </div>
             <div class="col-sm-8">
-              <img src="img/envirolist-layout.jpg" width="100%" alt="">
+              <img src="img/dude.jpg" width="100%" alt="">
             </div>
           </div>
         </div>
@@ -361,22 +363,14 @@
             </div>
             <div class="col-sm-4">
               <p class="bold">Importance of environmental work</p>
-              <p class="small">
+              <p class="sixteen">
                 As we all now by know, we are currently facing a huge environmental problem. Together we can start countering this problem. Envirolist enables us to join forces.
               </p>
             </div>
           </div>
         </div>
       </section>
-      <section class="single-page__video">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-sm-offset-2">
-              <div class="single-page__video__vid"></div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <hr>
       <section class="single-page__other">
         <div class="container">
           <p class="bold">Other projects</p>
