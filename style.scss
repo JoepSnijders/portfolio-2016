@@ -99,6 +99,7 @@ a .btn {
 .slide-in {
   // display: inline-block;
   overflow: hidden;
+  will-change: transform; // GPU Acceleration.
 }
 .slide-in * {
   transition: transform 1s $cubic, opacity 1s ease;
