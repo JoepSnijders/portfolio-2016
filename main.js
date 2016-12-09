@@ -123,3 +123,13 @@ function closeProject(){
 function toggleMenu() {
   $("#menu").toggleClass("active");
 }
+
+function playVideo(id, event){
+  var parent = $(event.target).parent().parent();
+  parent.addClass('no-overflow');
+  if (id === "envirolist"){
+    parent.html("").append('<iframe src="https://player.vimeo.com/video/191919806?autoplay=1" width="100%" height="320" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+  } else if (id === "invertuals") {
+    parent.html("").append('<iframe src="https://player.vimeo.com/video/191919806?autoplay=1" width="100%" height="320" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+  }
+}
