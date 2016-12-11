@@ -1,23 +1,31 @@
+// Cache Vars
 var screenWidth;
 var screenHeight;
-// Initial Load
+
+// On Initial Load
 $(document).ready(function() {
   if (window.location.hash) {
     redirect(window.location.hash);
   }
+
   screenHeight = $(window).height(); // Update Screen Size
   screenWidth = $(window).width(); // Update Screen Size
   updateScreenSize(screenWidth, screenHeight);
+
   if(isTouchDevice()){
-    console.log('Touch Device!');
+    console.log('Touch Device');
     $("body").addClass("touch");
     $(".screen").addClass("active");
   }
+});
+
+// On Completely Loaded
+$(window).on('load', function(){
   $("#home").addClass("active");
 });
 
-// Change screen size
-$( window ).resize(function() {
+// On Change screen size
+$(window).resize(function() {
   screenHeight = $(window).height(); // Update Screen Size
   screenWidth = $(window).width(); // Update Screen Size
   updateScreenSize(screenWidth, screenHeight);
@@ -50,10 +58,17 @@ $(document).keydown(function(e) {
 // Scroll detection
 var allowScroll = true;
 $('.index-pages').on('mousewheel DOMMouseScroll', function(e){
-  console.log('scrolling..');
+
+  // Prevent if Mobile
+  if($("body").hasClass('touch')){
+    allowScroll = false;
+    return false;
+  };
+
   e.preventDefault();
+
   if (allowScroll) {
-    if(e.originalEvent.wheelDelta < 0 || e.originalEvent.detail > 0) { // Scroll up (Chome or Firefox)
+    if(e.originalEvent.wheelDelta < 0 || e.originalEvent.detail > 0) { // Scroll up (Webkit or Firefox)
         allowScroll = false;
         selectNextScreen();
         setTimeout(function(){
@@ -72,7 +87,7 @@ $('.index-pages').on('mousewheel DOMMouseScroll', function(e){
   }
 });
 
-// Touch?
+// Touch device?
 function isTouchDevice() {
   return 'ontouchstart' in window        // works on most browsers
       || navigator.maxTouchPoints;       // works on IE10/11 and Surface

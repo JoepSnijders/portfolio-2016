@@ -4,6 +4,7 @@ New portfolio website.
 
 ---
 ## Todolist
+- [ ] Loading indicator homepage.
 - [ ] Envirolist content
 - [ ] Amplifier content + vid
 - [ ] Finish footer design

@@ -384,19 +384,21 @@ a .btn {
   margin-bottom: 140px;
 }
 .single-page__video-container {
-  background-color: #16191B;
+  background-color: transparentize(#16191B, 0.95);
+  border: 1px solid transparentize(#16191B, 0.95);
+  box-sizing: padding-box;
   height: 280px;
   width: 100%;
   position: relative;
   overflow: hidden;
-  &:hover .single-page__video-container__preview { transform: scale(1,1) !important; }
+  &:hover .single-page__video-container__preview { transform: scale(1.03,1.03) !important; }
   &.no-overflow { overflow: initial !important; }
 }
 .single-page__video-container__preview {
   position: absolute;
   height: 100%;
   width: 100%;
-  transform: scale(1.03, 1.03);
+  transform: scale(1, 1);
   background-image: url('../img/preview-envirolist.jpg');
   background-size: cover;
   opacity: 1;
@@ -408,8 +410,17 @@ a .btn {
     background-image: url('../img/preview-invertuals.jpg');
   }
 }
+.play-arrow {
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  left: -8px;
+  border-style: solid;
+  border-width: 10px 0 10px 20px;
+  border-color: transparent transparent transparent white;
+}
 .single-page__video-container__watch {
-  width: 200px;
+  width: 220px;
   padding: 20px 10px;
   background-color: transparentize(black, .4);
   cursor: pointer;
@@ -418,7 +429,7 @@ a .btn {
   position: absolute;
   top: 35%;
   left: 50%;
-  margin-left: -100px;
+  margin-left: -110px;
   overflow: hidden;
   z-index: 14;
   color: white;
