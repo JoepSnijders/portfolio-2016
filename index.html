@@ -199,6 +199,59 @@
           <div class="line"></div>
         </div>
       </div>
+      <!-- Kidup -->
+      <div class="project screen">
+        <div class="screen__content">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="slide-in big">
+                  <h2 onclick="openProject('kidup')">KidUp</h2>
+                </div>
+                <div class="row slide-in">
+                  <div class="col-md-9">
+                    <p class="sixteen">
+                      KidUp was a danish start-up that built a sharing economy platform for children equipment.
+                    </p>
+                  </div>
+                </div>
+                <div class="row slide-in">
+                  <div class="col-md-10">
+                    <div class="screen__content__details">
+                      <hr>
+                      <div class="screen__content__details__inner">
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <p class="bold small">Role</p>
+                            <p class="small">Lead Design/UX + Front-End</p>
+                          </div>
+                          <div class="col-sm-4">
+                            <p class="bold small">Company</p>
+                            <p class="small">KidUp</p>
+                          </div>
+                          <div class="col-sm-3">
+                            <p class="bold small">Year</p>
+                            <p class="small">2015/2016</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-5 slide-in">
+                <div class="screen__content__thumb" onclick="openProject('kidup')">
+                  <div class="screen__content__thumb__inner" style="background-image: url('img/kidup.jpg')"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-container slide-in big">
+            <div class="btn" onclick="openProject('kidup')">View Case</div>
+          </div>
+          <div class="line"></div>
+        </div>
+      </div>
       <!-- Dutch Invertuals Collected -->
       <div class="project screen">
         <div class="screen__content">
@@ -225,7 +278,7 @@
                           </div>
                           <div class="col-sm-3">
                             <p class="bold small">Agency</p>
-                            <p class="small">Edhv</p>
+                            <p class="small">Freelance @ Edhv</p>
                           </div>
                           <div class="col-sm-2">
                             <p class="bold small">Year</p>
@@ -271,7 +324,7 @@
             <div class="col-sm-3">
               <p class="bold">Email</p>
               <p>
-                <a href="mailto:joepsnijders@me.com">joepsnijders[at]me.com</a>
+                <a href="mailto:joepsnijders@me.com">joepsnijders@me.com</a>
               </p>
             </div>
             <div class="col-sm-3">
@@ -324,7 +377,7 @@
           </div>
         </div>
       </section>
-      <section class="single-page__second" style="background-color: #2E383E;">
+      <section class="single-page__second" style="background-color: #2E383E; padding-top: 12%; padding-bottom: 12%;">
         <!-- background-image: url('img/blue-map.jpg') -->
         <div class="container">
           <div class="row">
@@ -355,7 +408,7 @@
             <div class="col-sm-4">
               <p class="bold">Technology</p>
               <p class="sixteen">
-                The Envirolist platform consists of a front-end and a back-end. The front-end was done using the React javascript library, and the back-end was programmed in NodeJS (ExpressJS) and MongoDB. The back-end provides API end-points to communicate with the front-end application. To create a filterable map, I used the Google Maps API.
+                The Envirolist platform's front-end was done using the React javascript library, and the back-end was programmed in NodeJS (ExpressJS) and MongoDB. The back-end provides API end-points to communicate with the front-end application. To create a filterable map, I used the Google Maps API.
               </p>
             </div>
             <div class="col-sm-8">
@@ -558,37 +611,124 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-4">
-              <p class="bold">The design</p>
+              <p class="bold">The platform</p>
               <p class="small">
+                With Amplifier I first started to learn how to create a back-end and API endpoints to connect the front-end framework with back-end data. 
+
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies mauris a lacinia tincidunt. Vivamus risus metus, venenatis eget ornare vel, tincidunt in odio. Quisque lobortis sed orci sit amet accumsan.
               </p>
-            </div>
-            <div class="col-sm-8">
-
+              <br>
+              <br>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="single-page__video">
-        <div class="container">
           <div class="row">
-            <div class="col-sm-8 col-sm-offset-2">
-              <div class="single-page__video__vid"></div>
+            <div class="col-sm-12">
+              <img src="img/amplifiers.jpg" width="100%" alt="" />
             </div>
           </div>
         </div>
       </section>
+      <hr>
       <section class="single-page__other">
         <div class="container">
           <p class="bold">Other projects</p>
           <div class="row">
             <div class="col-sm-6">
-              <div class="single-page__other__project" onclick="closeProject(); openProject('envirolist');">
+              <div class="single-page__other__project" onclick="closeProject(); openProject('kidup');">
                 <div class="single-page__other__project__container">
-                  <div class="single-page__other__project__container__thumb" style="background-image: url('img/beach.jpg')"></div>
+                  <div class="single-page__other__project__container__thumb" style="background-image: url('img/kidup-big.jpg')"></div>
                 </div>
                 <div class="single-page__other__project__content">
-                  <h5>Envirolist</h5>
+                  <h5>KidUp</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="single-page__other__project" onclick="closeProject(); openProject('invertuals');">
+                <div class="single-page__other__project__container">
+                  <div class="single-page__other__project__container__thumb" style="background-image: url('img/invertuals.jpg')"></div>
+                </div>
+                <div class="single-page__other__project__content">
+                  <h5>Dutch Invertuals Collected</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="kidup" class="single-page">
+      <section class="single-page__intro">
+        <div class="single-page__intro__main-image" style="background-image: url('img/kidup-big.jpg'); background-position: center center;"></div>
+        <div class="single-page__intro__main-text">
+          <div class="slide-in big">
+            <h3>Kidup</h3>
+          </div>
+          <div class="slide-in">
+            <div class="line"></div>
+            <p class="sixteen">
+              From oktober 2015 to to April of 2016, I worked remotely for a Danish startup called KidUp. KidUp was created to offer new ways for parents to rent and rent out children equipment. The team consisted of 6 people. In this team I was lead design/ux and front-end developer. I learned to work together remotely (using Slack and GitHub) and to develop fast and agile. I mainly worked on launching an iPhone and Android app.
+              <br>
+              Unfortunately KidUp ceased to exist at April 2016 due to funding issues.
+            </p>
+            <br>
+            <br>
+          </div>
+          <div class="row slide-in">
+            <div class="col-sm-4">
+              <p class="bold small">Role</p>
+              <p class="small">Design / UX + Front-end</p>
+            </div>
+            <div class="col-sm-4">
+              <p class="bold small">Company</p>
+              <p class="small">KidUp</p>
+            </div>
+            <div class="col-sm-3">
+              <p class="bold small">Year</p>
+              <p class="small">2015/2016</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="single-page__third">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <p class="bold">The design</p>
+              <p class="small">
+                For the startup's design I employed emotional design. Emotional design was first introduced by Donald Norman, and is about using emotions to affect the user experience of the platform. We used illustrated avatars to improve the 'happy' feeling of the app (e.g. the girl and the gull avatar). In addition, KidUp was branded to feel light, playful and reliable by using bright colours, playful fonts.
+              </p>
+              <br>
+              <br>
+            </div>
+            <div class="col-sm-4">
+              <p class="bold">Technology used</p>
+              <p class="small">
+                We created both an iOS as Android application with the use of the Ionic Javascript platform. This platform uses Angular 1.5 to create hybrid apps. The main advantage is that you can now use web technologies to create smartphone apps.
+              </p>
+              <br>
+              <br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <img src="img/kidups.jpg" width="100%" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <section class="single-page__other" style="margin-top: 100px">
+        <div class="container">
+          <p class="bold">Other projects</p>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="single-page__other__project" onclick="closeProject(); openProject('amplifier');">
+                <div class="single-page__other__project__container">
+                  <div class="single-page__other__project__container__thumb" style="background-image: url('img/amplifier.jpg')"></div>
+                </div>
+                <div class="single-page__other__project__content">
+                  <h5>Amplifier</h5>
                 </div>
               </div>
             </div>
@@ -747,7 +887,7 @@
       <div class="menu-page__footer slide-in big">
         <div class="container">
           <p>
-            <a href="mailto:joepsnijders@me.com">joepsnijders[at]me.com</a>
+            <a href="mailto:joepsnijders@me.com">joepsnijders@me.com</a>
             |
             <a href="https://www.facebook.com/Joep-Snijders-Ontwerp-344760042309635/?fref=ts" target="_blank">Facebook</a>
             |
