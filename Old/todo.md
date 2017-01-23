@@ -1,5 +1,0 @@
-- [ ] Find a clean way to slide to next project
-- [ ] Find images for all projects
-- [ ] Finish content for all projects.
-- [ ] Find personal photo
-- [ ] Release new portfolio

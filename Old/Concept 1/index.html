@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Joep Snijders: Portfolio</title>
+  <link rel="stylesheet" href="dist/milligram.min.css" />
+  <link rel="stylesheet" href="dist/normalize.min.css" />
+  <link rel="stylesheet" href="dist/fonts.css" />
+  <link rel="stylesheet" href="dist/style.css" />
+</head>
+<body>
+  <header class="header fade-in header--transparent">
+    <div class="container">
+      <div class="row">
+        <div class="column column-25">
+          <div class="header__logo">
+            <a href="index.html">
+              Joep Snijders
+            </a>
+          </div>
+        </div>
+        <div class="column column-50 column-offset-25">
+          <ul class="header__navi">
+            <li class="header__navi__item active">
+              <a href="#">Projects</a>
+            </li>
+            <li class="header__navi__item about" onclick="togglePage('about')">
+              <a href="#">About me</a>
+            </li>
+            <li class="header__navi__item contact">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <header class="header header--fixed">
+    <div class="container">
+      <div class="row">
+        <div class="column column-25">
+          <div class="header__logo header--fixed__logo">
+            <a href="index.html">
+              Joep Snijders
+            </a>
+          </div>
+        </div>
+        <div class="column column-50 column-offset-25">
+          <ul class="header__navi header--fixed__navi">
+            <li class="header__navi__item header--fixed__navi__item">
+              <a href="#">Projects</a>
+            </li>
+            <li class="header__navi__item header--fixed__navi__item">
+              <a href="#">About me</a>
+            </li>
+            <li class="header__navi__item header--fixed__navi__item">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="home">
+    <!-- Splash -->
+    <div class="splash fade-in">
+      <div class="container">
+        <div class="row">
+          <div class="column column-60 column-offset-20">
+            <div class="splash__content slide-in">
+              <h1 id="hello">Well hello,</h1>
+              <p class="subheader">I am an interaction designer that loves to create bridges between humans and technology.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Posts -->
+    <div class="posts">
+      <div class="container">
+        <div class="row">
+          <div class="column column-67 column-offset-20">
+            <!-- Selected Work -->
+            <div class="selected-work fade-in">
+              <span>Selected Work</span>
+            </div>
+            <!-- Post -->
+            <div class="post slide-in" onclick="togglePage('invertuals')">
+              <div class="row">
+                <div class="column column-50">
+                  <div class="post__thumb post__thumb--invertuals"></div>
+                </div>
+                <div class="column column-50">
+                  <div class="post__content">
+                    <h2>Dutch Invertuals,</h2>
+                    <h3 class="green">Design and Technology</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat arcu et est molestie, non pellentesque enim egestas.</p>
+                    <p>
+                      <a class="button button--readmore">Read more..</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="post__background"></div>
+            </div>
+            <!-- Post -->
+            <div class="post slide-in" onclick="togglePage('amplifier')">
+              <div class="row">
+                <div class="column column-50">
+                  <div class="post__content">
+                    <h2>Coherent,</h2>
+                    <h3 class="green">Design and Technology</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat arcu et est molestie, non pellentesque enim egestas.</p>
+                    <p>
+                      <a class="button button--readmore">Read more..</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="column column-50">
+                  <div class="post__thumb post__thumb--right post__thumb--garden"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Horizontal -->
+        <div class="row">
+          <div class="column">
+            Horizontal
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About me -->
+    <div class="container">
+      <div class="row about-me">
+        <h1 class="about-me__header">Interacting with future <br /> technology</h1>
+        <div class="column column-offset-34">
+          <div class="row">
+            <div class="column">
+              <div class="about-me__image"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-50">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat arcu et est molestie, non pellentesque enim egestas.Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+            <div class="column column-50">
+              <p>Sed volutpat arcu et est molestie, non pellentesque enim egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat arcu et est molestie, non pellentesque enim egestas.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <a href="" class="button button--blue">Send me an email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Single Pages -->
+  <div id="invertuals" class="page">
+    <div class="container">
+      <div class="row">
+        <div class="column column-50 column-offset-10">
+          <div class="page__header">
+            <h2>Dutch Invertuals,</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat arcu et est molestie, non pellentesque enim egestas.</p>
+            <img src="images/invertuals.jpg" width="100%" alt="" />
+          </div>
+          <div class="page__background page__background--green"></div>
+          <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat arcu et est molestie, non pellentesque enim egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat arcu et est molestie, non pellentesque enim egestas.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat arcu et est molestie, non pellentesque enim egestas.</p>
+        </div>
+        <div class="column column-25 column-offset-10">
+          <div class="related-skills">
+            <div class="selected-work less-margin fade-in">
+              <span>Related skills</span>
+            </div>
+            <br>
+            <div class="skill design">Design</div>
+            <div class="skill ux">UX</div>
+            <div class="skill code">Code</div>
+          </div>
+          <div class="clients">
+            <div class="selected-work less-margin fade-in">
+              <span>Clients</span>
+            </div>
+            <br>
+            <p>Edhv<br>Dutch Invertuals</p>
+            <hr>
+            <a onclick="closePage()" class="button button--blue">Back to home</a>
+            <a onclick="slideNextProject('invertuals', 'amplifier')" class="button button--blue">Next Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column column-75 column-offset-10">
+          <div class="page__bottom">
+            <img src="images/invertuals.jpg" class="page__bottom__image" width="270px" alt="" />
+            <div class="page__bottom__content">
+              <h3>Passion for design</h3>
+              <p>Non pellentesque enim egestas.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat arcu et est molestie, non pellentesque enim egestas.</p>
+              <a href="#" class="button button--blue">Visit Dutch Invertuals</a>
+            </div>
+            <div class="page__bottom__background"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row page__next-up">
+        <div class="column column-25 column-offset-10 page__next-up__prev">
+          Go Back
+        </div>
+        <div class="column column-25 column-offset-25 page__next-up__next">
+          Next project
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="column column-offset-10">
+            Footer
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div id="amplifier" class="page">
+    <div class="container">
+      <div class="row">
+        <div class="column column-50 column-offset-10">
+          <div class="page__header">
+            <h2>Amplifier,</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat arcu et est molestie, non pellentesque enim egestas.</p>
+            <img src="images/ty.jpg" width="100%" alt="" />
+          </div>
+          <div class="page__background page__background--black"></div>
+          <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat arcu et est molestie, non pellentesque enim egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat arcu et est molestie, non pellentesque enim egestas.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat arcu et est molestie, non pellentesque enim egestas.</p>
+        </div>
+        <div class="column column-25 column-offset-10">
+          <div class="related-skills">
+            <div class="selected-work less-margin fade-in">
+              <span>Related skills</span>
+            </div>
+            <br>
+            <div class="skill design">Design</div>
+            <div class="skill ux">UX</div>
+            <div class="skill code">Code</div>
+          </div>
+          <div class="clients">
+            <div class="selected-work less-margin fade-in">
+              <span>Clients</span>
+            </div>
+            <br>
+            <p>Edhv<br>Dutch Invertuals</p>
+            <hr>
+            <a onclick="closePage()" class="button button--blue">Back to home</a>
+            <a onclick="slideNextProject('amplifier', 'invertuals')" class="button button--blue">Next Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column column-75 column-offset-10">
+          <div class="page__bottom">
+            <img src="images/invertuals.jpg" class="page__bottom__image" width="270px" alt="" />
+            <div class="page__bottom__content">
+              <h3>Passion for design</h3>
+              <p>Non pellentesque enim egestas.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat arcu et est molestie, non pellentesque enim egestas.</p>
+              <a href="#" class="button button--blue">Visit Dutch Invertuals</a>
+            </div>
+            <div class="page__bottom__background"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row page__next-up">
+        <div class="column column-25 column-offset-10 page__next-up__prev">
+          Go Back
+        </div>
+        <div class="column column-25 column-offset-25 page__next-up__next">
+          Next project
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="column column-offset-10">
+            Footer
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Side Pages -->
+  <div class="side-page side-page--about">
+    <div class="container">
+      <p>lala</p>
+    </div>
+  </div>
+  <div class="side-page side-page--contact">
+    <div class="container">
+      <p>lala</p>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="scripts.js" charset="utf-8"></script>
+</body>
+</html>

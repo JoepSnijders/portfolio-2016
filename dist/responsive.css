@@ -60,6 +60,7 @@
   h3 { font-size: 25px; }
 
   .menu-page__footer { bottom: 10px; }
+  .menu-page__content .container { margin-top: -100px; }
   .screen__content__details { display: none; }
   .btn-container { bottom: 0; }
 
